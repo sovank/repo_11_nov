@@ -17,11 +17,10 @@ pipeline {
         }
 
         stage('Deploy to Production') {
-            when {
-                "${env.BRANCH_NAME}" 'main'
-            }
+            
             
             steps {
+                echo "${GIT_BRANCH}"
                 echo 'Deploying to production...'
                 // Production deployment script goes here
             }
