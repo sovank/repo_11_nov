@@ -24,7 +24,7 @@ pipeline {
                 }
             
             steps {
-                echo "${GIT_BRANCH}
+                echo "${GIT_BRANCH}"
                 echo 'Deploying to production...'
                 // Production deployment script goes here
             }
