@@ -18,7 +18,7 @@ pipeline {
 
         stage('Deploy to Production') {
             when {
-                "${env.BRANCH_NAME}" == 'main'
+                "${env.BRANCH_NAME}" 'main'
             }
             
             steps {
