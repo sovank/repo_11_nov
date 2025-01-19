@@ -17,7 +17,9 @@ pipeline {
         }
 
         stage('Deploy to Production') {
-            
+            when {
+                branch 'main'
+                }
             
             steps {
                 echo "${GIT_BRANCH}"
