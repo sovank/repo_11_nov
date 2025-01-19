@@ -17,7 +17,6 @@ pipeline {
         }
 
         stage('Deploy to Production') {
-            echo '$branch'
             when {
                 branch 'main'
                 }
