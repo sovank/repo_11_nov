@@ -1,7 +1,9 @@
 pipeline {
 
     agent any
-
+    environment {
+        BRANCH_NAME = 'main' // Setting a custom value
+    }
     stages {
         stage('Build') {
             steps {
@@ -18,11 +20,11 @@ pipeline {
 
         stage('Deploy to Production') {
             when {
-                branch 'origin/main'
+                branch 'main'
                 }
             
             steps {
-                echo "${GIT_BRANCH}"
+                echo "${GIT_BRANCH}
                 echo 'Deploying to production...'
                 // Production deployment script goes here
             }
